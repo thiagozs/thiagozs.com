@@ -15,8 +15,8 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 COPY --from=builder /go/src/app/server .
-COPY --from=builder /go/src/app/assets assets
-COPY --from=builder /go/src/app/public public
+#COPY --from=builder /go/src/app/assets assets
+#COPY --from=builder /go/src/app/public public
 
 EXPOSE 80
 
